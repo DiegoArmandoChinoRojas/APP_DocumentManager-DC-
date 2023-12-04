@@ -15,14 +15,122 @@
        android:foreground="?selectableItemBackground"
        app:cardCornerRadius="10dp">
 
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <!--Campo Apellidos-->
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:boxCornerRadiusBottomEnd="8dp"
+               app:boxCornerRadiusTopStart="8dp"
+               app:boxCornerRadiusTopEnd="8dp"
+               app:boxCornerRadiusBottomStart="8dp">
+
+               <EditText
+                   android:id="@+id/Et_apellidos_admin"
+                   android:hint="@string/Et_apellidos_admin"
+                   android:inputType="textPersonName|textCapWords"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+               <!--Campo Nombres-->
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:boxCornerRadiusBottomEnd="8dp"
+               app:boxCornerRadiusTopStart="8dp"
+               app:boxCornerRadiusTopEnd="8dp"
+               app:boxCornerRadiusBottomStart="8dp">
+
+               <EditText
+                   android:id="@+id/Et_nombres_admin"
+                   android:hint="@string/Et_nombres_admin"
+                   android:inputType="textPersonName|textCapWords"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+               <!--Campo Correo-->
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               app:boxCornerRadiusBottomEnd="8dp"
+               app:boxCornerRadiusTopStart="8dp"
+               app:boxCornerRadiusTopEnd="8dp"
+               app:boxCornerRadiusBottomStart="8dp">
+
+               <EditText
+                   android:id="@+id/Et_correo_admin"
+                   android:hint="@string/Et_correo_admin"
+                   android:inputType="textEmailAddress"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+               <!--Campo Constraseña-->
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               app:passwordToggleEnabled="true"
+               app:boxCornerRadiusBottomEnd="8dp"
+               app:boxCornerRadiusTopStart="8dp"
+               app:boxCornerRadiusTopEnd="8dp"
+               app:boxCornerRadiusBottomStart="8dp">
+
+               <EditText
+                   android:id="@+id/Et_contra_admin"
+                   android:hint="@string/Et_contraseña_admin"
+                   android:inputType="textPassword"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+               <!--Campo Repetir Contraseña-->
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               app:passwordToggleEnabled="true"
+               app:boxCornerRadiusBottomEnd="8dp"
+               app:boxCornerRadiusTopStart="8dp"
+               app:boxCornerRadiusTopEnd="8dp"
+               app:boxCornerRadiusBottomStart="8dp">
+
+               <EditText
+                   android:id="@+id/Et_R_contra_admin"
+                   android:hint="@string/Et_R_contraseña_admin"
+                   android:inputType="textPassword"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.button.MaterialButton
+               android:id="@+id/Btn_actualizar_a"
+               android:text="@string/Btn_actualizar_a"
+               android:textAllCaps="true"
+               android:layout_marginTop="10dp"
+               android:layout_gravity="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
        <TextView
            android:id="@+id/Cerrar_Sesion_Admin"
            android:text="@string/Cerrar_Sesion_Admin"
            android:drawablePadding="10dp"
+           android:padding="15dp"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            app:drawableStartCompat="@drawable/ic_cerrar_sesion"
            app:drawableEndCompat="@drawable/ic_siguiente" />
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
 
    </com.google.android.material.card.MaterialCardView>
 

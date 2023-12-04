@@ -9,6 +9,7 @@
 
     <RelativeLayout
         android:id="@+id/toolbarRLAdmin"
+        android:background="@color/blue"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m_toolbar_height">
 
@@ -16,6 +17,8 @@
             android:id="@+id/Titulo_Rl_Admin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:textAllCaps="true"
             android:layout_centerInParent="true"
             android:text="@string/Titulo_RL_Admin"/>

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DocumentManager"
         tools:targetApi="31">
         <activity
+            android:name=".Administrador.Agregar_Documento"
+            android:exported="false" />
+        <activity
+            android:name=".Administrador.AgregarDocument"
+            android:exported="false" />
+        <activity
             android:name=".Administrador.Agregar_Categoria"
             android:exported="false" />
         <activity

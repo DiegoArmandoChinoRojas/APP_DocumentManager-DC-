@@ -33,6 +33,14 @@
     <string name="Item_nombre_categoria_a">Nombre categoria</string>
     <string name="Buscar_categoria">Buscar categoria</string>
 
+    <string name="Txt_agregar_doc">Agregar documento</string>
+    <string name="Et_titulo_documento">Título documento</string>
+    <string name="Et_descripcion_doc">Descripçión documento</string>
+    <string name="Tv_categoria_doc">Categoria</string>
+    <string name="Btn_subir_doc">Subir</string>
+
+    <string name="Btn_actualizar_a">Actualizar</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

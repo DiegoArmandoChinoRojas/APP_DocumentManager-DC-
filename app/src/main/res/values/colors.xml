@@ -2,6 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="turquezaL">#00FDFF</color>
-    <color name="turquezaN">#009092</color>
+    <color name="turquoiseLight">#00FDFF</color>
+    <color name="turquoiseNight">#009092</color>
+    <color name="orange">#FFBB4B</color>
+    <color name="orangeNight">#955D00</color>
+    <color name="yellow">#FFF74B</color>
+    <color name="lemon">#4BFF5B</color>
+    <color name="blue">#4BA5FF</color>
+    <color name="purple">#AD4BFF</color>
+    <color name="red">#FF4B4B</color>
 </resources>

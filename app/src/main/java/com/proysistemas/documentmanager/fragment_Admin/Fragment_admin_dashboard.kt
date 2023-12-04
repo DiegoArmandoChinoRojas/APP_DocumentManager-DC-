@@ -15,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.proysistemas.documentmanager.Administrador.AdaptadorCategoria
 import com.proysistemas.documentmanager.Administrador.Agregar_Categoria
+import com.proysistemas.documentmanager.Administrador.Agregar_Documento
 import com.proysistemas.documentmanager.Administrador.ModeloCategoria
 import com.proysistemas.documentmanager.databinding.FragmentAdminDashboardBinding
 
@@ -62,6 +63,7 @@ class Fragment_admin_dashboard : Fragment() {
             startActivity(Intent(mcontext,Agregar_Categoria::class.java))
         }
         binding.AgregarPdf.setOnClickListener(){
+            startActivity(Intent(mcontext,Agregar_Documento::class.java))
 
         }
     }

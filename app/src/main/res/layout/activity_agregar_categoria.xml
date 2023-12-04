@@ -9,6 +9,7 @@
     <RelativeLayout
         android:id="@+id/toolbarRLAgregarCategoria"
         android:layout_width="match_parent"
+        android:background="@color/blue"
         android:layout_height="@dimen/m_toolbar_height">
         
         <ImageButton
@@ -23,6 +24,8 @@
         <TextView
             android:text="@string/Txt_agregar_categoria"
             android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -59,8 +62,9 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/Agregar_cateooria_BD"
                 android:text="@string/Agregar_cateooria_BD"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAllCaps="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"/>
 
