@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "724268926645",
+    "project_id": "app-doc---kotlin",
+    "storage_bucket": "app-doc---kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724268926645:android:0928a5cc5f84c8a23260fc",
+        "android_client_info": {
+          "package_name": "com.proysistemas.documentmanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTIm8NWpglQtyo0Ga63cX-LL7t2pdVkLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

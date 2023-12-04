@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">DocumentManager</string>
+
+    <string name="Menu_panel">Panel</string>
+    <string name="Menu_cuenta">Cuenta</string>
+
+    <string name="Titulo_RL_Admin">Titulo</string>
+
+    <string name="Txt_rol">elegir rol</string>
+    <string name="Btn_rol_administrador">Administrador</string>
+    <string name="Btn_rol_empleado">Empleado</string>
+
+    <string name="TxtRegistroAdmin">Registro Administrador</string>
+    <string name="Et_apellidos_admin">Apellidos</string>
+    <string name="Et_nombres_admin">Nombres</string>
+    <string name="Et_correo_admin">Correo</string>
+    <string name="Et_contraseña_admin">Contraseña</string>
+    <string name="Et_R_contraseña_admin">Confirmar Contraseña</string>
+    <string name="Btn_registrar_admin">Registrar</string>
+
+    <string name="Cerrar_Sesion_Admin">Cerrar Sesión</string>
+
+    <string name="TxtLoginAdmin">Login Administrador</string>
+
+    <string name="Btn_login_Admin">Ingresar</string>
+    <string name="Txt_tengo_cuenta">Tengo una cuenta</string>
+
+    <string name="Btn_agregar_categoria">Agregar categoria</string>
+    <string name="Txt_agregar_categoria">Agregar categoria</string>
+    <string name="Et_categoria">Ingrese categoria</string>
+    <string name="Agregar_cateooria_BD">Agregar</string>
+
+    <string name="Item_nombre_categoria_a">Nombre categoria</string>
+    <string name="Buscar_categoria">Buscar categoria</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
