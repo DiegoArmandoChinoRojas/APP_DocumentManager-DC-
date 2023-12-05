@@ -15,13 +15,14 @@
         <ImageButton
             android:id="@+id/Ib_regresar"
             android:src="@drawable/ic_regresar"
-            android:background="@android:color/transparent"
+            android:background="@color/blueNight"
             android:padding="10dp"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="@dimen/m_toolbar_height" />
         
         <TextView
+
             android:text="@string/Txt_agregar_categoria"
             android:textAllCaps="true"
             android:textColor="@color/white"

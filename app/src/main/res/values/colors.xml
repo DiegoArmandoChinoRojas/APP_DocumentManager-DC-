@@ -9,6 +9,7 @@
     <color name="yellow">#FFF74B</color>
     <color name="lemon">#4BFF5B</color>
     <color name="blue">#4BA5FF</color>
+    <color name="blueNight">#003295</color>
     <color name="purple">#AD4BFF</color>
     <color name="red">#FF4B4B</color>
 </resources>

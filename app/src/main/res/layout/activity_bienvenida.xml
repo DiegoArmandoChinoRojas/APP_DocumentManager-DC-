@@ -27,6 +27,7 @@
         android:paddingTop="5dp"
         android:text="@string/Bienvenido"
         android:textAllCaps="true"
+        android:textColor="@color/red"
         android:fontFamily="@font/hedvig_serift"
         android:textSize="40dp">
 

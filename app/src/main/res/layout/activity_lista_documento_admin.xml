@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Administrador.ListaDocumentoAdmin">
+
+    <!--toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRLListarDocumento"
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:layout_height="@dimen/m_toolbar_height">
+
+        <ImageButton
+            android:id="@+id/Ib_regresar"
+            android:src="@drawable/ic_regresar"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:background="@color/blueNight"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m_toolbar_height"
+            />
+
+        <!--Titulo documento-->
+        <TextView
+            android:id="@+id/Txt_titulo_documento"
+            android:text="@string/Txt_titulo_documento"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:fontFamily="@font/hedvig_serift"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <!--Titulo categoria-->
+        <TextView
+            android:id="@+id/Txt_titulo_categoria"
+            android:text="@string/Txt_titulo_categoria"
+            android:layout_below="@+id/Txt_titulo_documento"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        
+        <View
+            android:background="#cccccc"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+
+    </RelativeLayout>
+
+    <!--Buscar documento-->
+    <RelativeLayout
+        android:id="@+id/Titulo_doc_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarRLListarDocumento">
+
+    <EditText
+        android:id="@+id/Et_buscar_documento_a"
+        android:hint="@string/Et_buscar_documento_a"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/buscar" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_documentos_a"
+        android:layout_below="@+id/Titulo_doc_a"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</RelativeLayout>

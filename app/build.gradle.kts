@@ -51,6 +51,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
     implementation ("com.airbnb.android:lottie:3.4.0")
+    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

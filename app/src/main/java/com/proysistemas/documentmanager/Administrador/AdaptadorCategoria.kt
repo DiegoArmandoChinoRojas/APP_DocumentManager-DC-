@@ -2,6 +2,7 @@ package com.proysistemas.documentmanager.Administrador
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -63,6 +64,15 @@ class AdaptadorCategoria : RecyclerView.Adapter<AdaptadorCategoria.HolderCategor
                 }
             builder.show()
         }
+
+        // Listar por categoria iv
+        holder.itemView.setOnClickListener{
+            val intent = Intent(mcontext, ListaDocumentoAdmin::class.java)
+            intent.putExtra("idCategoria", id)
+            intent.putExtra("descripcionCategoria", descripcion)
+            mcontext.startActivity(intent)
+        }
+
     }
 
     // Obtener y buscar por ID-BD

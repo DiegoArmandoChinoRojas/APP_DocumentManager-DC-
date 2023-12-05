@@ -207,8 +207,4 @@ class Agregar_Documento : AppCompatActivity() {
         }
     )
 
-
-
-
-
 }

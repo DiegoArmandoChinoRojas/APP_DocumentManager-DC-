@@ -17,22 +17,22 @@
         <ImageButton
             android:id="@+id/Ib_regresar"
             android:src="@drawable/ic_regresar"
-            android:background="@android:color/transparent"
-            android:padding="1dp"
+            android:background="@color/blueNight"
+            android:padding="10dp"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="@dimen/m_toolbar_height"/>
 
         <TextView
             android:id="@+id/Txt_agregar_doc"
-            android:text="@string/Txt_agregar_doc"
-            android:layout_centerInParent="true"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            android:fontFamily="@font/hedvig_serift"
-            android:textAllCaps="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/hedvig_serift"
+            android:text="@string/Txt_agregar_doc"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
         <View
             android:layout_width="match_parent"

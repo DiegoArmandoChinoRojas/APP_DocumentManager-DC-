@@ -26,9 +26,9 @@
     <string name="Btn_login_Admin">Ingresar</string>
     <string name="Txt_tengo_cuenta">Tengo una cuenta</string>
 
-    <string name="Btn_agregar_categoria">Agregar categoria</string>
-    <string name="Txt_agregar_categoria">Agregar categoria</string>
-    <string name="Et_descripcion_cate">Ingrese categoria</string>
+    <string name="Btn_agregar_categoria">Agregar categoría</string>
+    <string name="Txt_agregar_categoria">Agregar categoría</string>
+    <string name="Et_descripcion_cate">Ingrese categoría</string>
     <string name="Agregar_cateooria_BD">Agregar</string>
 
     <string name="Item_nombre_categoria_a">Nombre categoria</string>
@@ -37,9 +37,16 @@
     <string name="Txt_agregar_doc">Agregar documento</string>
     <string name="Et_titulo_documento">Título documento</string>
     <string name="Et_descripcion_doc">Descripçión documento</string>
-    <string name="Tv_categoria_doc">Categoria</string>
+    <string name="Tv_categoria_doc">Categoría</string>
     <string name="Btn_subir_doc">Subir</string>
 
+    <string name="Txt_titulo_documento">Título documento</string>
+    <string name="Txt_titulo_categoria">Categoría</string>
+    <string name="Et_buscar_documento_a">Buscar documento</string>
+    
+    
+    
+    
     <string name="Btn_actualizar_a">Actualizar</string>
 
     <!-- TODO: Remove or change this placeholder text -->

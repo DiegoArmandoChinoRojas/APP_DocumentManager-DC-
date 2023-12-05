@@ -16,11 +16,11 @@
         <ImageButton
             android:id="@+id/Ib_regresar"
             android:src="@drawable/ic_regresar"
-            android:padding="20dp"
+            android:padding="10dp"
             android:layout_centerVertical="true"
-            android:background="@android:color/transparent"
+            android:background="@color/blueNight"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="@dimen/m_toolbar_height"/>
 
         <TextView
             android:layout_width="wrap_content"
