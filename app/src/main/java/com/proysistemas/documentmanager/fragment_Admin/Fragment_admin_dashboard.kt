@@ -69,7 +69,7 @@ class Fragment_admin_dashboard : Fragment() {
     }
     private fun ListarCategorias(){
         categoriaArrayList = ArrayList()
-        val ref = FirebaseDatabase.getInstance().getReference("Categoria").orderByChild("categoria")
+        val ref = FirebaseDatabase.getInstance().getReference("Categoria").orderByChild("descripcion")
         ref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 categoriaArrayList.clear()

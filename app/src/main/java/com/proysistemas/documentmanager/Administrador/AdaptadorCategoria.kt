@@ -44,11 +44,11 @@ class AdaptadorCategoria : RecyclerView.Adapter<AdaptadorCategoria.HolderCategor
     override fun onBindViewHolder(holder: HolderCategoria, position: Int) {
         val modelo = categoriaArrayList[position]
         val id= modelo.id
-        val categoria = modelo.categoria
+        val descripcion = modelo.descripcion
         val tiempo = modelo.tiempo
         val uid = modelo. uid
 
-        holder.categoriaTv.text = categoria
+        holder.categoriaTv.text = descripcion
 
         holder.eliminarCategoria.setOnClickListener{
             val builder = AlertDialog.Builder(mcontext)

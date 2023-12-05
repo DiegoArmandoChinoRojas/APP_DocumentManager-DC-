@@ -23,7 +23,7 @@ class FiltroCategoria : Filter {
             val modeloFiltrado: ArrayList<ModeloCategoria> = ArrayList()
 
             for (i in 0 until filtroLista.size) {
-                if (filtroLista[i].categoria.uppercase().contains(categoria)) {
+                if (filtroLista[i].descripcion.uppercase().contains(categoria)) {
                     modeloFiltrado.add(filtroLista[i])
                 }
                 resultados.count = modeloFiltrado.size

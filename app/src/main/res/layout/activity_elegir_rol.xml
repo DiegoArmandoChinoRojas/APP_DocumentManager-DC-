@@ -20,6 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Txt_rol"
+            android:fontFamily="@font/hedvig_serift"
+            android:textSize="20dp"
             android:textAllCaps="true"/>
 
         <com.google.android.material.button.MaterialButton

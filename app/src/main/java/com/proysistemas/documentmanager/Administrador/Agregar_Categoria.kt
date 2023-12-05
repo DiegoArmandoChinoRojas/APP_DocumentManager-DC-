@@ -36,10 +36,10 @@ class Agregar_Categoria : AppCompatActivity() {
         }
 
     }
-    private var categoria = ""
+    private var descripcion = ""
     private fun validarDatos() {
-        categoria = binding.EtCategoria.text.toString().trim()
-        if(categoria.isEmpty()){
+        descripcion = binding.EtDescripcionCate.text.toString().trim()
+        if(descripcion.isEmpty()){
             Toast.makeText(applicationContext, "Ingrese una categoria", Toast.LENGTH_SHORT).show()
         }else{
             AgregarCategoriaBD()
@@ -54,7 +54,7 @@ class Agregar_Categoria : AppCompatActivity() {
 
         val hashMap = HashMap<String,Any>()
         hashMap["id"]= "$tiempo"
-        hashMap["categoria"]=categoria
+        hashMap["descripcion"]=descripcion
         hashMap["tiempo"]= tiempo
         hashMap["uid"] = "${firebaseAuth.uid}"
 
@@ -65,7 +65,7 @@ class Agregar_Categoria : AppCompatActivity() {
             .addOnSuccessListener {
                 progressDialog.dismiss()
                 Toast.makeText(applicationContext, "Se Agrego categoria", Toast.LENGTH_SHORT).show()
-                binding.EtCategoria.setText("")
+                binding.EtDescripcionCate.setText("")
                 startActivity(Intent(this@Agregar_Categoria, MainActivity::class.java))
                 finishAffinity()
             }

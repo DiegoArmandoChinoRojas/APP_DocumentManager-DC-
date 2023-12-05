@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DocumentManager</string>
 
+    <string name="Bienvenido">Bienvenido</string>
     <string name="Menu_panel">Panel</string>
     <string name="Menu_cuenta">Cuenta</string>
 
@@ -27,7 +28,7 @@
 
     <string name="Btn_agregar_categoria">Agregar categoria</string>
     <string name="Txt_agregar_categoria">Agregar categoria</string>
-    <string name="Et_categoria">Ingrese categoria</string>
+    <string name="Et_descripcion_cate">Ingrese categoria</string>
     <string name="Agregar_cateooria_BD">Agregar</string>
 
     <string name="Item_nombre_categoria_a">Nombre categoria</string>

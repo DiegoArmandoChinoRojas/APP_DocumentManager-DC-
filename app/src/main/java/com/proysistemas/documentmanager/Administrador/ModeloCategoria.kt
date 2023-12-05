@@ -3,15 +3,15 @@ package com.proysistemas.documentmanager.Administrador
 class ModeloCategoria {
 
     var id : String= ""
-    var categoria :String= ""
+    var descripcion :String= ""
     var tiempo : Long= 0
     var uid : String= ""
 
     constructor()
 
-    constructor(id: String, categoria: String, tiempo: Long, uid: String) {
+    constructor(id: String, descripcion: String, tiempo: Long, uid: String) {
         this.id = id
-        this.categoria = categoria
+        this.descripcion = descripcion
         this.tiempo = tiempo
         this.uid = uid
     }
