@@ -89,17 +89,18 @@
 
         <!--Título Documento -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Et_titulo_documento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:layout_marginTop="-65dp"
-            android:layout_marginEnd="30dp"
-            android:hint="@string/Et_titulo_documento">
+            android:layout_marginEnd="30dp">
 
             <EditText
+                android:id="@+id/Et_titulo_documento"
+                android:hint="@string/Et_titulo_documento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
                 android:inputType="textPersonName|textCapWords"
                 android:padding="10dp" />
 
@@ -116,16 +117,17 @@
             app:lottie_rawRes="@raw/documento"></com.airbnb.lottie.LottieAnimationView>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Et_descripcion_doc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:layout_marginTop="-65dp"
-            android:layout_marginEnd="30dp"
-            android:hint="@string/Et_descripcion_doc">
+            android:layout_marginEnd="30dp">
 
             <EditText
+                android:id="@+id/Et_descripcion_doc"
+                android:hint="@string/Et_descripcion_doc"
                 android:layout_width="match_parent"
+                android:drawablePadding="10dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName|textCapWords"
                 android:padding="10dp" />
@@ -135,6 +137,7 @@
         <!--Seleccionar Categoria -->
         <TextView
             android:id="@+id/Tv_categoria_doc"
+            android:text="@string/Tv_categoria_doc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -144,7 +147,6 @@
             android:drawablePadding="10dp"
             android:gravity="center_vertical"
             android:padding="10dp"
-            android:text="@string/Tv_categoria_doc"
             android:textColor="@color/black"
             app:drawableEndCompat="@drawable/ic_abajo"
             app:drawableStartCompat="@drawable/ic_categoria" />
