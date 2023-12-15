@@ -1,23 +1,30 @@
 package com.proysistemas.documentmanager.Administrador
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.proysistemas.documentmanager.databinding.ItemDocumentoAdminBinding
 
-class AdaptadorDocumentoAdmin : RecyclerView.Adapter<AdaptadorDocumentoAdmin.HolderDocumentoAdmin>{
+class AdaptadorDocumentoAdmin : RecyclerView.Adapter<AdaptadorDocumentoAdmin.HolderDocumentoAdmin>, Filterable{
 
     private lateinit var binding: ItemDocumentoAdminBinding
-    private lateinit var m_context : Context
-    private lateinit var docArrayList : ArrayList<ModeloDocumento>
+    private var m_context : Context
+    public var docArrayList : ArrayList<ModeloDocumento>
+    private var filtroDocumento : ArrayList<ModeloDocumento>
+    private var filtro : FiltroDocumentoAdmin?=null
 
     constructor(m_context: Context, docArrayList: ArrayList<ModeloDocumento>) : super() {
         this.m_context = m_context
         this.docArrayList = docArrayList
+        this.filtroDocumento = docArrayList
     }
-
 
     inner class HolderDocumentoAdmin (itemView: View) : RecyclerView.ViewHolder(itemView){
         val VisualizarDoc = binding.VisualizarDoc
@@ -28,8 +35,6 @@ class AdaptadorDocumentoAdmin : RecyclerView.Adapter<AdaptadorDocumentoAdmin.Hol
         val Txt_tamaño_documento_admin=binding.TxtTamaODocumentoAdmin
         val Txt_fecha_documento_admin = binding.TxtFechaDocumentoAdmin
         val Ib_mas_opciones = binding.IbMasOpciones
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderDocumentoAdmin {
@@ -60,6 +65,51 @@ class AdaptadorDocumentoAdmin : RecyclerView.Adapter<AdaptadorDocumentoAdmin.Hol
         Funciones.cargarDocumentoUrl(docUrl, titulo, holder.VisualizarDoc, holder.progressBar, null)
         Funciones.cargarTamañoDoc(docUrl,titulo, holder.Txt_tamaño_documento_admin)
 
+        holder.Ib_mas_opciones.setOnClickListener{
+            verOpciones(modelo, holder)
+        }
+    }
+
+    private fun verOpciones(modelo: ModeloDocumento, holder: AdaptadorDocumentoAdmin.HolderDocumentoAdmin) {
+        val idDocumento= modelo.id
+        val urlDocumento = modelo.url
+        var tituloDocumento = modelo.titulo
+
+        val opciones = arrayOf("Actualizar", "Eliminar")
+
+        //Alert Dialog
+        val builder = AlertDialog.Builder(m_context)
+        builder.setTitle("Seleccione una opción")
+            .setItems(opciones){dialog,posicion->
+                if(posicion ==0){
+                    //Actualizar
+                    val intent = Intent(m_context,ActualizarDocumento::class.java)
+                    intent.putExtra("idDocumento", idDocumento)
+                    m_context.startActivity(intent)
+
+                }else if(posicion == 1){
+                    //Eliminar
+                    val opcionesEliminacion= arrayOf("Si","Cancelar")
+                    val builder =AlertDialog.Builder(m_context)
+                        builder.setTitle("¿Confirmas que quieres eliminar el documento ${tituloDocumento}?")
+                        .setItems(opcionesEliminacion){dialog,posicion->
+                            if(posicion ==0){
+                                Funciones.eliminarDocumento(m_context,idDocumento,urlDocumento, tituloDocumento)
+                            }else if(posicion ==1){
+                                Toast.makeText(m_context, "Se a cancelado", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                        .show()
+                }
+            }
+            .show()
+    }
+
+    override fun getFilter(): Filter {
+        if(filtro == null){
+            filtro = FiltroDocumentoAdmin(filtroDocumento, this)
+        }
+        return filtro as FiltroDocumentoAdmin
     }
 
 }

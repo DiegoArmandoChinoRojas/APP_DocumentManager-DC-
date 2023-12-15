@@ -1,8 +1,10 @@
 package com.proysistemas.documentmanager.Administrador
 
+import android.Manifest
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +15,7 @@ import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import com.google.android.gms.tasks.Task
 
 import com.google.firebase.auth.FirebaseAuth
@@ -51,9 +54,14 @@ class Agregar_Documento : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
 
-        // Adjuntar documento
+        // Adjuntar documento por permiso del Gestor Archivo
         binding.IbAdjuntarDoc.setOnClickListener{
-            ElegirDocumento()
+            if(ContextCompat.checkSelfPermission(this@Agregar_Documento,
+                    Manifest.permission.READ_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED){
+                ElegirDocumento()
+            }else{
+                SolicitarPermisoAccederArchivo.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+            }
         }
 
         // Selecciona categoria
@@ -195,16 +203,25 @@ class Agregar_Documento : AppCompatActivity() {
         documentoActivityRl.launch(intent)
     }
 
-    // Obtener Uri del documento Gestor Archivos
+    // Obtener el documento archivo dispsitivo
     val documentoActivityRl = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult(),
         ActivityResultCallback<ActivityResult>{resultado ->
             if(resultado.resultCode == RESULT_OK){
-                docUri = resultado.data!!   .data
+                docUri = resultado.data!!.data
             }else{
                 Toast.makeText(this,"Cancelado", Toast.LENGTH_SHORT).show()
             }
         }
     )
+
+    // B- True/False Permiso Gestor Archivo
+    private val SolicitarPermisoAccederArchivo = registerForActivityResult(ActivityResultContracts.RequestPermission()){Permiso->
+        if(Permiso){
+            ElegirDocumento()
+        }else{
+            Toast.makeText(this, "El permiso para acceder al Gestor Archivos no a sido concedido", Toast.LENGTH_SHORT).show()
+        }
+    }
 
 }

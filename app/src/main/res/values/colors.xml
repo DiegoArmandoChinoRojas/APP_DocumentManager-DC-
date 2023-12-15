@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="sky">#A2FCFF</color>
     <color name="turquoiseLight">#00FDFF</color>
     <color name="turquoiseNight">#009092</color>
     <color name="orange">#FFBB4B</color>

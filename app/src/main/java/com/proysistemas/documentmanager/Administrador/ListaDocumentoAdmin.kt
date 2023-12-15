@@ -2,6 +2,8 @@ package com.proysistemas.documentmanager.Administrador
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -29,7 +31,30 @@ class ListaDocumentoAdmin : AppCompatActivity() {
 
         binding.TxtTituloCategoria.text = descripcionCate
 
+        binding.IbRegresar.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
+
         ListarDocumentos()
+
+        binding.EtBuscarDocumentoA.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(documento: CharSequence?, start: Int, before: Int, count: Int) {
+                try{
+                    adaptadorDocumentoAdmin.filter.filter(documento)
+                }catch (e:Exception){
+
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+        })
+
     }
 
     private fun ListarDocumentos() {

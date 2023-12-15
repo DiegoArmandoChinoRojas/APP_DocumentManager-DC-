@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Administrador.Agregar_Documento">
+    tools:context=".Administrador.ActualizarDocumento">
 
-    <!--Toolbar-->
+
+
+    <!--Toolbar -->
     <RelativeLayout
-        android:id="@+id/toolbarRLAgregarDocumento"
         android:background="@color/blue"
+        android:id="@+id/toolbarRLActualizar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m_toolbar_height">
-        
+
+
         <ImageButton
             android:id="@+id/Ib_regresar"
             android:src="@drawable/ic_regresar"
@@ -21,15 +23,14 @@
             android:padding="10dp"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/m_toolbar_height"/>
+            android:layout_height="@dimen/m_toolbar_height" />
 
         <TextView
-            android:id="@+id/Txt_agregar_doc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/hedvig_serift"
-            android:text="@string/Txt_agregar_doc"
+            android:text="@string/Txt_actualizar_doc"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="20dp"
@@ -38,47 +39,33 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#ccc"
+            android:background="#cccccc"
             android:layout_alignParentBottom="true"/>
 
     </RelativeLayout>
 
-    <!--Adjuntar -->
+    <!-- Imagen-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/IvActualizarL"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/toolbarRLActualizar"
+        app:lottie_rawRes="@raw/ok"
+        app:lottie_loop="true">
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <!-- -->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/ll_AdjuntarDoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@+id/toolbarRLAgregarDocumento">
+        android:layout_below="@id/IvActualizarL">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            app:lottie_autoPlay="true"
-            app:lottie_rawRes="@raw/documento"
-            app:lottie_loop="true">
-        </com.airbnb.lottie.LottieAnimationView>
-
-        <ImageButton
-            android:id="@+id/Ib_AdjuntarDoc"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_adjuntar_doc"
-            android:layout_marginTop="10dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <!--Información Documento -->
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ll_AdjuntarDoc"
-        android:layout_centerHorizontal="true"
-        android:orientation="vertical">
-
+        <!--Título Documento -->
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="35dp"
             android:layout_height="40dp"
@@ -86,9 +73,9 @@
             android:layout_marginVertical="19dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/documento"></com.airbnb.lottie.LottieAnimationView>
+            app:lottie_rawRes="@raw/documento">
 
-        <!--Título Documento -->
+        </com.airbnb.lottie.LottieAnimationView>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -115,7 +102,9 @@
             android:layout_marginVertical="19dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/documento"></com.airbnb.lottie.LottieAnimationView>
+            app:lottie_rawRes="@raw/documento">
+
+        </com.airbnb.lottie.LottieAnimationView>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -152,17 +141,17 @@
             app:drawableEndCompat="@drawable/ic_abajo"
             app:drawableStartCompat="@drawable/ic_categoria" />
 
-        <!--Boton Subir -->
+        <!--Actualizar Información Documento -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/Btn_subir_doc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/Btn_actualizar_doc"
+            android:text="@string/Btn_actualizar_doc"
+            android:textAllCaps="true"
             android:layout_gravity="center"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:text="@string/Btn_subir_doc"
-            android:textAllCaps="true" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

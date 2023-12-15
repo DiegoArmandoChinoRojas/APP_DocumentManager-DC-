@@ -1,10 +1,13 @@
 package com.proysistemas.documentmanager.Administrador
 
 import android.app.Application
+import android.app.ProgressDialog
+import android.content.Context
 import android.text.format.DateFormat
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import com.github.barteksc.pdfviewer.PDFView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -97,6 +100,42 @@ class Funciones :Application(){
                     }
 
                 })
+        }
+
+        fun eliminarDocumento(context: Context, idDocumento:String,urlDocumento:String, tituloDocumento:String){
+            val progressDialog =ProgressDialog(context)
+            progressDialog.setTitle("Espere porfavor")
+            progressDialog.setMessage("Eliminando $tituloDocumento")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+
+            val storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(urlDocumento)
+            storageReference.delete()
+                .addOnSuccessListener {
+                    val ref = FirebaseDatabase.getInstance().getReference("Documentos")
+                    ref.child(idDocumento)
+                        .removeValue().addOnSuccessListener {
+                            progressDialog.dismiss()
+                            Toast.makeText(context, "Documento eliminado satisfactoriamente", Toast.LENGTH_SHORT).show()
+                        }
+                        .addOnFailureListener{e->
+                            progressDialog.dismiss()
+                            Toast.makeText(context, "Fallo la eliminación debido a ${e.message}", Toast.LENGTH_SHORT).show()
+
+                        }
+
+                }
+                .addOnFailureListener{e->
+                    progressDialog.dismiss()
+                    Toast.makeText(context, "Fallo la eliminación debido a ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+
         }
     }
 }
