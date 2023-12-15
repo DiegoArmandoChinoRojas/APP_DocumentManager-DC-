@@ -75,7 +75,7 @@
 
     <string name="Btn_leer_doc">Leer</string>
     <string name="Txt_leer_doc">Lectura del documento</string>
-    
+
     <!--Cuenta Administrador -->
     <string name="apellido_admin">Apellidos:</string>
     <string name="Txt_apellido_admin"> -- </string>
@@ -88,6 +88,11 @@
     <string name="rol_admin">Rol:</string>
     <string name="Txt_rol_admin"> -- </string>
     <string name="Txt_mas_opciones">Más opciones:</string>
+
+    <string name="EditarPerfilAdmin">Editar Perfíl</string>
+    <string name="Txt_editar_pefil_a">Editar Perfil</string>
+    <string name="Et_a_apellidos">Apellidos</string>
+    <string name="Btn_actualizar_info">Actualizar</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

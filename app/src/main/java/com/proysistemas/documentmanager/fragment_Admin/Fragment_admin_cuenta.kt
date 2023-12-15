@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.proysistemas.documentmanager.Administrador.EditarPerfilAdmin
 import com.proysistemas.documentmanager.Administrador.Funciones
 
 import com.proysistemas.documentmanager.Elegir_rol
@@ -40,7 +41,14 @@ class Fragment_admin_cuenta : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         firebaseAuth = FirebaseAuth.getInstance()
+
+        // Obtener informacion de cuenta Administrador
         cargarInformacion()
+
+        //
+        binding.EditarPerfilAdmin.setOnClickListener{
+            startActivity(Intent(mcontext, EditarPerfilAdmin::class.java))
+        }
 
         binding.CerrarSesionAdmin.setOnClickListener {
 

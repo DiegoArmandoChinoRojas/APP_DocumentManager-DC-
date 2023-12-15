@@ -118,20 +118,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="10dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/EditarPerfilAdmin"
+                    android:text="@string/EditarPerfilAdmin"
+                    android:layout_gravity="center"
+                    app:drawableStartCompat="@drawable/ic_editar"
+                    app:drawableEndCompat="@drawable/ic_siguiente"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
             <!--Cerrar Sesión -->
             <com.google.android.material.card.MaterialCardView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_margin="2dp"
-       android:clickable="true"
-       android:focusable="true"
-       android:foreground="?selectableItemBackground"
-       app:cardCornerRadius="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="10dp"
+                android:padding="10dp">
 
-       <androidx.appcompat.widget.LinearLayoutCompat
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
        <TextView
            android:id="@+id/Cerrar_Sesion_Admin"

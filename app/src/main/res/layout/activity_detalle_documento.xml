@@ -25,15 +25,15 @@
             android:layout_height="@dimen/m_toolbar_height" />
 
         <TextView
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:fontFamily="@font/hedvig_serif"
-            android:textSize="20dp"
-            android:textAllCaps="true"
-            android:text="@string/Txt_detalle_doc"
-            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/hedvig_serif"
+            android:text="@string/Txt_detalle_doc"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <View
             android:background="#cccccc"

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.DocumentManager"
         tools:targetApi="31">
         <activity
+            android:name=".Administrador.EditarPerfilAdmin"
+            android:exported="false" />
+        <activity
             android:name=".LeerDocumento"
             android:exported="false" />
         <activity

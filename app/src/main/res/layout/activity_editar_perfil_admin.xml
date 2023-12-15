@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Administrador.EditarPerfilAdmin">
+
+    <!--Toolbar -->
+    <RelativeLayout
+        android:id="@+id/ToolbarRLEditarPA"
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:layout_height="@dimen/m_toolbar_height">
+
+        <ImageButton
+            android:id="@+id/Ib_regresar"
+            android:src="@drawable/ic_regresar"
+            android:background="@color/blueNight"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m_toolbar_height" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/hedvig_serif"
+            android:text="@string/Txt_editar_pefil_a"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <View
+            android:background="#cccccc"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/ToolbarRLEditarPA"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/perfilRL"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true">
+
+                <!-- Imagen de Perfil-->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_perfil_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_perfil_cuenta"
+                    android:scaleType="centerCrop"/>
+
+
+                <!-- Cambiar Imagen-->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/FbCambiarImg"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_cambiar_img"/>
+
+            </RelativeLayout>
+
+            <!-- Apellidos -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TILApellidos"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/perfilRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp">
+
+                <EditText
+                    android:id="@+id/Et_a_apellidos"
+                    android:hint="@string/Et_a_apellidos"
+                    android:inputType="textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Actualizar Información-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_actualizar_info"
+                android:text="@string/Btn_actualizar_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:backgroundTint="@color/turquoiseNight"
+                android:textSize="20dp"
+                android:textAllCaps="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/TILApellidos">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
