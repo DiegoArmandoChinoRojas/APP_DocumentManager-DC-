@@ -125,7 +125,7 @@ class Agregar_Documento : AppCompatActivity() {
         hashMap["id"]= "$tiempo"
         hashMap["titulo"]= titulo
         hashMap["descripcion"]= descripcion
-        hashMap["categoria"]= categoria
+        hashMap["categoria"]= id_categoria
         hashMap["url"]= urlDocSubido
         hashMap["tiempo"]= tiempo
         hashMap["contadorDescargas"]= 0
@@ -190,7 +190,7 @@ class Agregar_Documento : AppCompatActivity() {
     //Acceder memoria interna
     private fun ElegirDocumento(){
         val intent= Intent()
-        intent.type = "application/documento"
+        intent.type = "application/documentos"
         intent.action = Intent.ACTION_GET_CONTENT
         documentoActivityRl.launch(intent)
     }

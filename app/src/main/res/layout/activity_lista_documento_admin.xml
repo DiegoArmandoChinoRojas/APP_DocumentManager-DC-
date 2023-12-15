@@ -12,7 +12,8 @@
         android:id="@+id/toolbarRLListarDocumento"
         android:layout_width="match_parent"
         android:background="@color/blue"
-        android:layout_height="@dimen/m_toolbar_height">
+        android:layout_height="@dimen/m_toolbar_height"
+        >
 
         <ImageButton
             android:id="@+id/Ib_regresar"
@@ -89,11 +90,15 @@
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RV_documentos_a"
-        android:layout_below="@+id/Titulo_doc_a"
+        android:id="@+id/RV_documentos_admin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_below="@+id/Titulo_doc_a"
+        tools:listitem="@layout/item_documento_admin"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 </RelativeLayout>

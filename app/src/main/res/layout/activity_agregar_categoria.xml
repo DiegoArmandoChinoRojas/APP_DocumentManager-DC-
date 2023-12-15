@@ -22,7 +22,6 @@
             android:layout_height="@dimen/m_toolbar_height" />
         
         <TextView
-
             android:text="@string/Txt_agregar_categoria"
             android:textAllCaps="true"
             android:textColor="@color/white"

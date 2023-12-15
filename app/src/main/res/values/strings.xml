@@ -40,12 +40,15 @@
     <string name="Tv_categoria_doc">Categoría</string>
     <string name="Btn_subir_doc">Subir</string>
 
-    <string name="Txt_titulo_documento">Título documento</string>
+    <string name="Txt_titulo_documento">Documentos</string>
     <string name="Txt_titulo_categoria">Categoría</string>
     <string name="Et_buscar_documento_a">Buscar documento</string>
     
-    
-    
+    <string name="Txt_titulo_documento_admin">Título Documento</string>
+    <string name="Txt_descripcion_documento_admin">Descripción Documento</string>
+    <string name="Txt_categoria_documento_admin">Categoría</string>
+    <string name="Txt_tamaño_documento_admin">5MB</string>
+    <string name="Txt_fecha_documento_admin">dd/MM/yy</string>
     
     <string name="Btn_actualizar_a">Actualizar</string>
 
