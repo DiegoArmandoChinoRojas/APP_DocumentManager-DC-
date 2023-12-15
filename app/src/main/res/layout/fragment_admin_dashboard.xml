@@ -54,6 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/turquoiseNight"
+            android:textSize="18dp"
             android:text="@string/Btn_agregar_categoria"
             android:textAllCaps="true" />
 
@@ -62,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:src="@drawable/ic_pdf" />
+            android:src="@drawable/word" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/Agregar_doc"
@@ -70,13 +72,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:src="@drawable/ic_doc" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/Agregar_ppt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/ppt" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

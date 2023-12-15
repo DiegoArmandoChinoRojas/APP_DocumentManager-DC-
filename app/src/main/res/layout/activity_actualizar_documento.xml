@@ -146,6 +146,8 @@
             android:id="@+id/Btn_actualizar_doc"
             android:text="@string/Btn_actualizar_doc"
             android:textAllCaps="true"
+            android:backgroundTint="@color/turquoiseNight"
+            android:textSize="20dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginStart="30dp"

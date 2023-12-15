@@ -46,12 +46,17 @@ dependencies {
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
+
+    // Firebase dependencias
     implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
     implementation("com.google.firebase:firebase-database-ktx:20.3.0")
     implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
-    implementation ("com.airbnb.android:lottie:3.4.0")
-    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
+
+    implementation ("com.airbnb.android:lottie:3.4.0") // Animación LottieFile - Icons
+    implementation ("com.github.bumptech.glide:glide:4.16.0") // Visualizar Img Firebase
+    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2") // Visualizar PDF
+
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

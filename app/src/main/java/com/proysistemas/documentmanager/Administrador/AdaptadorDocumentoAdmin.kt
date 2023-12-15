@@ -68,6 +68,11 @@ class AdaptadorDocumentoAdmin : RecyclerView.Adapter<AdaptadorDocumentoAdmin.Hol
         holder.Ib_mas_opciones.setOnClickListener{
             verOpciones(modelo, holder)
         }
+        holder.itemView.setOnClickListener{
+            val intent = Intent(m_context,DetalleDocumento::class.java)
+            intent.putExtra("idDocumento",docId)
+            m_context.startActivity(intent)
+        }
     }
 
     private fun verOpciones(modelo: ModeloDocumento, holder: AdaptadorDocumentoAdmin.HolderDocumentoAdmin) {

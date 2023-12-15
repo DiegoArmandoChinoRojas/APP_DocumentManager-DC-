@@ -15,23 +15,13 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"/>
 
-    <TextView
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/bienvenida"
+        android:layout_below="@id/a_bienvenida"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="142dp"
-        android:gravity="center"
-        android:paddingTop="5dp"
-        android:text="@string/Bienvenido"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:fontFamily="@font/hedvig_serift"
-        android:textSize="40dp">
-
-    </TextView>
+        android:layout_height="50dp"
+        app:lottie_rawRes="@raw/bienvenido"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
 </RelativeLayout>

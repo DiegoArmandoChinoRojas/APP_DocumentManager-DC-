@@ -56,7 +56,7 @@ class Funciones :Application(){
                 }
         }
 
-        fun cargarDocumentoUrl(docUrl: String, docTitulo: String, docView: PDFView, progressBar: ProgressBar, paginaTv:TextView?    ){
+        fun cargarDocumentoUrl(docUrl: String, docTitulo: String, docView: PDFView, progressBar: ProgressBar, paginaTv:TextView?){
             val ref = FirebaseStorage.getInstance().getReferenceFromUrl(docUrl)
             ref.getBytes(Constantes.Maximo_bytes)
                 .addOnSuccessListener {bytes->
@@ -74,8 +74,7 @@ class Funciones :Application(){
                         .onLoad{Pagina->
                             progressBar.visibility = View.INVISIBLE
                             if(paginaTv !=null){
-                                paginaTv.text= "$paginaTv"
-
+                                paginaTv.text= "$Pagina"
                             }
                         }
                         .load()

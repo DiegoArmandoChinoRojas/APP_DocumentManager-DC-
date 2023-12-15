@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Elegir_rol">
 
-
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,28 +19,47 @@
             android:layout_height="wrap_content"
             android:text="@string/Txt_rol"
             android:fontFamily="@font/hedvig_serift"
-            android:textSize="20dp"
+            android:textSize="40dp"
             android:textStyle="bold"
             android:textAllCaps="true"/>
 
+        <ImageView
+            android:src="@drawable/admin"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"/>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Btn_rol_administrador"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/turquoiseNight"
+            android:textSize="20dp"
             android:textAllCaps="true"
-            android:layout_marginTop="20dp"
             android:text="@string/Btn_rol_administrador" />
+
+        <ImageView
+            android:src="@drawable/emp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Btn_rol_empleado"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="@color/turquoiseNight"
+            android:textSize="20dp"
             android:layout_height="wrap_content"
             android:textAllCaps="true"
             android:layout_marginTop="5dp"
             android:text="@string/Btn_rol_empleado" />
 
-
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 </RelativeLayout>

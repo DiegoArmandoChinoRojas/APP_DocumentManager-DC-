@@ -54,6 +54,40 @@
     <string name="Txt_actualizar_doc">Actualizar Documento</string>
     <string name="Btn_actualizar_doc">Actualizar</string>
 
+    <string name="Txt_detalle_doc">Detalle Documento</string>
+    <string name="titulo_doc_d">Título Documento</string>
+
+    <string name="Txt_categoria_d">Categoria:</string>
+    <string name="categoria_d"> -- </string>
+    <string name="Txt_fecha_d"> Fecha: </string>
+    <string name="fecha_d"> -- </string>
+    <string name="Txt_tamaño_d">Tamaño:</string>
+    <string name="tamaño_d"> -- </string>
+    <string name="Txt_vistas_d">Vistas:</string>
+    <string name="vistas_d">--</string>
+    <string name="Txt_descargas_d">Descargas:</string>
+    <string name="descargas_d">--</string>
+    <string name="Txt_paginas_d">Páginas:</string>
+    <string name="paginas_d">--</string>
+
+    <string name="Txt_descripcion_d">Descripción:</string>
+    <string name="descripcion_d">--:</string>
+
+    <string name="Btn_leer_doc">Leer</string>
+    <string name="Txt_leer_doc">Lectura del documento</string>
+    
+    <!--Cuenta Administrador -->
+    <string name="apellido_admin">Apellidos:</string>
+    <string name="Txt_apellido_admin"> -- </string>
+    <string name="nombre_admin">Nombres:</string>
+    <string name="Txt_nombre_admin"> -- </string>
+    <string name="correo_admin">Correo:</string>
+    <string name="Txt_correo_admin"> -- </string>
+    <string name="t_registro_admin">Registrado desde:</string>
+    <string name="Txt_t_registro_admin"> -- </string>
+    <string name="rol_admin">Rol:</string>
+    <string name="Txt_rol_admin"> -- </string>
+    <string name="Txt_mas_opciones">Más opciones:</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -162,6 +162,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
             android:text="@string/Btn_subir_doc"
+            android:backgroundTint="@color/turquoiseNight"
+            android:textSize="20dp"
             android:textAllCaps="true" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
